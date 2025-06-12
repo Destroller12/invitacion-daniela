@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Invitación para Noche de Peliculas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Open Sans', sans-serif;
+      background: #fff8e7;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: start;
+      min-height: 100vh;
+      background-image: url('https://www.transparenttextures.com/patterns/gplay.png');
+      overflow-x: hidden;
+    }
+    header {
+      text-align: center;
+      margin-top: 40px;
+      padding: 0 20px;
+    }
+    header h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 2.5rem;
+      color: #f6c90e;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+    .peliculas {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px 20px;
+      width: 100%;
+      box-sizing: border-box;
+      max-width: 1200px;
+    }
+    .pelicula {
+      background: #fffbe0;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+    .pelicula:hover {
+      transform: translateY(-5px);
+    }
+    .pelicula img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+    .pelicula .contenido {
+      padding: 15px;
+    }
+    .pelicula .contenido h3 {
+      margin-top: 0;
+      color: #d89e00;
+    }
+    .confirmar {
+      margin: 40px 0;
+      text-align: center;
+      padding: 0 20px;
+    }
+    .confirmar a {
+      background: #f6c90e;
+      color: #333;
+      padding: 12px 24px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+      display: inline-block;
+    }
+    .confirmar a:hover {
+      background: #e6b800;
+    }
+    footer {
+      margin-bottom: 30px;
+      color: #aaa;
+      font-size: 0.9rem;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .floating-icons {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+    .icon {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      opacity: 0.5;
+      animation: float 20s linear infinite;
+    }
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) translateX(0);
+      }
+      100% {
+        transform: translateY(-200px) translateX(50px);
+      }
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      header p {
+        font-size: 1rem;
+      }
+      .pelicula img {
+        height: 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="floating-icons">
+    <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" class="icon" style="left: 10%; animation-delay: 0s;">
+    <img src="https://cdn-icons-png.flaticon.com/512/616/616431.png" class="icon" style="left: 30%; animation-delay: 5s;">
+    <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" class="icon" style="left: 50%; animation-delay: 10s;">
+    <img src="https://cdn-icons-png.flaticon.com/512/616/616431.png" class="icon" style="left: 70%; animation-delay: 15s;">
+    <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" class="icon" style="left: 90%; animation-delay: 20s;">
+  </div>
+
+  <header>
+    <h1>Para Daniela 💛</h1>
+    <p>Esto es una invitación para que podamos ver una o varias películas por Discord.<br>¿Aceptas?</p>
+  </header>
+
+  <section class="peliculas">
+    <div class="pelicula">
+      <img src="origen.jpg" alt="Origen">
+      <div class="contenido">
+        <h3>Origen (Christopher Nolan)</h3>
+        <p>Dom Cobb es un ladrón capaz de entrar a los sueños para robar secretos. Un último trabajo podría redimirlo.</p>
+      </div>
+    </div>
+
+    <div class="pelicula">
+      <img src="the-alto-knights.jpg" alt="The Alto Knights">
+      <div class="contenido">
+        <h3>The Alto Knights: Mafia y Poder</h3>
+        <p>La lucha entre Costello y Genovese por el dominio del crimen en Nueva York en los 50.</p>
+      </div>
+    </div>
+
+    <div class="pelicula">
+      <img src="angeles-inesperados.jpg" alt="Ángeles Inesperados">
+      <div class="contenido">
+        <h3>Ángeles Inesperados</h3>
+        <p>Una peluquera ayuda a una familia a reunir a su comunidad para un trasplante vital.</p>
+      </div>
+    </div>
+
+    <div class="pelicula">
+      <img src="tarot-de-la-muerte.jpg" alt="Tarot de la Muerte">
+      <div class="contenido">
+        <h3>Tarot de la Muerte</h3>
+        <p>Un grupo de amigos desata horrores tras usar una baraja maldita sin respetar las reglas.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="confirmar">
+    <a href="https://wa.me/1234567890?text=¡Hola!%20Acepto%20la%20invitación%20para%20ver%20una%20película%20por%20Discord.%20¿Cuándo%20la%20vemos?" target="_blank">Aceptar invitación 💬</a>
+  </div>
+
+  <footer>
+    Lo hice con mucho cariño, acepta y cuadramos la fecha de cuando podemos hacer la maratón.💛 
+  </footer>
+</body>
+</html>
